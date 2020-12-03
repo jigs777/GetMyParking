@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if kdefaults.string(forKey: "isFirstTime") == nil {
+            kdefaults.set(true, forKey: "isFirstTime")
+        }else{
+            kdefaults.set(false, forKey: "isFirstTime")
+
+        }
         return true
     }
 
